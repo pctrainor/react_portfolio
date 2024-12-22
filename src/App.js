@@ -7,12 +7,13 @@ function App() {
     <div className="App"> 
       <header className="App-header">
         <a href="https://data-phil.com" target="_blank" rel="noopener noreferrer">
-          <img src={qrCode} className="App-logo" alt="logo" />
+          <img src={qrCode} className="App-logo" alt="logo"  title='click for full portfolio'/>
         </a>
         <h1>
-          Phillip C. Trainor <br/><br/>
-          PMP | Naval Aviator <br/>
-          Veteran | Leader <br/><br/>
+        <br/> Phillip C. Trainor <br/>
+          <p>PMP | Naval Aviator <br/>
+          Veteran | Leader </p>
+          
           <a href="mailto:ptrainor@uark.edu" className="mailto-link">ptrainor@uark.edu</a>
         </h1>
       </header>
