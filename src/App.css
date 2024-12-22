@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  overflow: hidden; /* Hide any overflow */
 }
 
 p {
@@ -8,14 +10,21 @@ p {
 }
 
 .App-logo {
-  height: 17vmin;
-  pointer-events: keep; /* Keep or remove, depending on your needs */
+  width: 50%;
+  pointer-events: auto; /* Keep or remove, depending on your needs */
   transition: transform 0.5s ease-in-out; /* Add transition for smooth animation changes */
+  box-sizing: border-box; /* Ensure the box fits within the borders */
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@media (min-width: 768px) { /* Adjust styles for screens 768px and wider */
+  .App-header {
+    font-size: calc(14px + 2vmin); /* Larger font size */
   }
 }
 
@@ -26,15 +35,13 @@ p {
 .App-header {
   width: 100%;
   background-color: #1e1e1e; /* Darker background for less strain */
-  min-height: 100vh;
+  height: 100%; /* Set the height to 100% of the parent container */
   display: flex;
-  overflow: hidden; /* Add this line to hide the extra background */
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(8px + 2vmin);
   color: #dcdcdc; /* Softer white color */
-  margin-bottom: -1px; 
 }
 
 .App-link {
@@ -52,7 +59,9 @@ p {
 
 body {
   background-color: #1e1e1e; /* Darker background for less strain */
-  animation: zoomOut 0.5s ease-in-out forwards;
+  margin: 0; /* Remove default margin */
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  overflow: hidden; /* Hide any overflow */
 }
 
 @keyframes zoomOut {
@@ -67,4 +76,3 @@ body {
 .mailto-link {
   color: #9D2235;
 }
-
