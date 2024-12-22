@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+}
+
+p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.App-logo {
+  height: 17vmin;
+  pointer-events: keep; /* Keep or remove, depending on your needs */
+  transition: transform 0.5s ease-in-out; /* Add transition for smooth animation changes */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-logo:hover {
+  animation: App-logo-spin infinite 2s linear; /* Faster rotation on hover */
+}
+
+.App-header {
+  width: 100%;
+  background-color: #1e1e1e; /* Darker background for less strain */
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden; /* Add this line to hide the extra background */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #dcdcdc; /* Softer white color */
+  margin-bottom: -1px; 
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background-color: #1e1e1e; /* Darker background for less strain */
+  animation: zoomOut 0.5s ease-in-out forwards;
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}
+
+.mailto-link {
+  color: #9D2235;
+}
+
