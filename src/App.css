@@ -10,7 +10,7 @@ p {
 }
 
 .App-logo {
-  width: 50%;
+  width: 35%;
   pointer-events: auto; /* Keep or remove, depending on your needs */
   transition: transform 0.5s ease-in-out; /* Add transition for smooth animation changes */
   box-sizing: border-box; /* Ensure the box fits within the borders */
