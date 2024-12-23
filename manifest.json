@@ -8,15 +8,20 @@
       "type": "image/x-icon"
     },
     {
-      "src": "pct.png",
+      "src": "pct-192.png", 
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192" 
     },
     {
-      "src": "pct.png",
+      "src": "pct-512.png", 
       "type": "image/png",
       "sizes": "512x512"
-    }
+    },
+    {
+      "src": "pct-180.png", 
+      "type": "image/png",
+      "sizes": "180x180" 
+    } 
   ],
   "start_url": ".",
   "display": "standalone",
