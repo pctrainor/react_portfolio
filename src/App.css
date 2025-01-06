@@ -1,7 +1,9 @@
 .App {
   text-align: center;
-  height: 100vh; /* Set the height to 100% of the viewport height */
-  overflow: hidden; /* Hide any overflow */
+  min-height: 100vh; 
+  overflow: hidden;
+  display: flex; 
+  flex-direction: column; 
 }
 
 p {
@@ -11,9 +13,9 @@ p {
 
 .App-logo {
   width: 35%;
-  pointer-events: auto; /* Keep or remove, depending on your needs */
-  transition: transform 0.5s ease-in-out; /* Add transition for smooth animation changes */
-  box-sizing: border-box; /* Ensure the box fits within the borders */
+  max-width: 200px; 
+  transition: transform 0.5s ease-in-out;
+  box-sizing: border-box; 
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -22,31 +24,29 @@ p {
   }
 }
 
-@media (min-width: 768px) { /* Adjust styles for screens 768px and wider */
+@media (min-width: 768px) { 
   .App-header {
-    font-size: calc(14px + 2vmin); /* Larger font size */
+    font-size: calc(14px + 2vmin); 
   }
 }
 
 .App-logo:hover {
-  animation: App-logo-spin infinite 2s linear; /* Faster rotation on hover */
+  animation: App-logo-spin infinite 2s linear; 
 }
 
 .App-header {
   width: 100%;
-  background-color: #1e1e1e; /* Darker background for less strain */
-  height: 100%; /* Set the height to 100% of the parent container */
+  background-color: #1e1e1e;
+  flex-grow: 1; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(8px + 2vmin);
-  color: #dcdcdc; /* Softer white color */
+  color: #dcdcdc;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* Removed .App-link as it's not being used */
 
 @keyframes App-logo-spin {
   from {
@@ -58,21 +58,22 @@ p {
 }
 
 body {
-  background-color: #1e1e1e; /* Darker background for less strain */
-  margin: 0; /* Remove default margin */
-  height: 100vh; /* Set the height to 100% of the viewport height */
-  overflow: hidden; /* Hide any overflow */
+  background-color: #1e1e1e; 
+  margin: 0; 
+  height: 100vh; /* You can keep this or remove it, depending on your needs */
+  overflow: hidden; 
 }
 
-@keyframes zoomOut {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0.9);
-  }
-}
+/* Removed @keyframes zoomOut as it's not being used */
 
 .mailto-link {
   color: #9D2235;
+}
+
+.info-container { 
+  margin-top: 20px; 
+}
+
+.info-container p {
+  margin: 5px 0; 
 }
