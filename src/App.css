@@ -1,79 +1,213 @@
+/* Base styling for the entire app */
+body {
+  background-color: #1e2a3a; /* Slightly blue-tinted dark background */
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #e8e8e8;
+  line-height: 1.6;
+}
+
 .App {
   text-align: center;
-  min-height: 100vh; 
-  overflow: hidden;
-  display: flex; 
-  flex-direction: column; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-p {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.App-logo {
-  width: 35%;
-  max-width: 200px; 
-  transition: transform 0.5s ease-in-out;
-  box-sizing: border-box; 
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@media (min-width: 768px) { 
-  .App-header {
-    font-size: calc(14px + 2vmin); 
-  }
-}
-
-.App-logo:hover {
-  animation: App-logo-spin infinite 2s linear; 
-}
-
+/* Header styling */
 .App-header {
+  background-color: #263747; /* Slightly lighter than body for contrast */
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #e8e8e8;
+  letter-spacing: 1px;
+}
+
+.App-header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+  color: #4CAF50; /* Updated accent color */
+  letter-spacing: 0.5px;
+}
+
+/* Main content area */
+.App-main {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
   width: 100%;
-  background-color: #1e1e1e;
-  flex-grow: 1; 
+  box-sizing: border-box;
+}
+
+/* QR code section styling */
+.portfolio-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background-color: #263747; /* Updated to match other sections */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #e8e8e8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-section h2 {
+  font-size: 2.2rem;
+  color: #4CAF50; /* Updated accent color */
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.portfolio-section h2:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 3px;
+  background-color: #4CAF50; /* Updated accent color */
+  transform: scaleX(0.7);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-section:hover h2:after {
+  transform: scaleX(1);
+}
+
+.qr-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(8px + 2vmin);
-  color: #dcdcdc;
+  margin: 2rem 0;
 }
 
-/* Removed .App-link as it's not being used */
+.static-qr-code {
+  height: 200px;
+  width: auto;
+  max-width: 100%;
+  border: 2px solid #4CAF50; /* Updated accent color */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.static-qr-code:hover {
+  transform: scale(1.05);
+}
+
+.qr-container figcaption {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #aaaaaa;
+}
+
+/* Links styling */
+a {
+  color: #4CAF50; /* Updated accent color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #66BB6A; /* Lighter green on hover */
+  text-decoration: underline;
+}
+
+/* General section styling */
+section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .App-header h1 {
+    font-size: 2.3rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .App-main {
+    padding: 1.8rem 1.3rem;
   }
 }
 
-body {
-  background-color: #1e1e1e; 
-  margin: 0; 
-  height: 100vh; /* You can keep this or remove it, depending on your needs */
-  overflow: hidden; 
+@media (max-width: 768px) {
+  .App-header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .App-header h1 {
+    font-size: 2rem;
+  }
+  
+  .App-header p {
+    font-size: 1rem;
+  }
+  
+  .App-main {
+    padding: 1.5rem 1rem;
+  }
+  
+  .portfolio-section {
+    padding: 1.25rem;
+    margin: 2rem 0;
+  }
+  
+  .portfolio-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .static-qr-code {
+    height: 150px;
+  }
 }
 
-/* Removed @keyframes zoomOut as it's not being used */
-
-.mailto-link {
-  color: #9D2235;
+@media (max-width: 480px) {
+  .App-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .App-header p {
+    font-size: 0.9rem;
+  }
+  
+  .App-main {
+    padding: 1.2rem 0.8rem;
+  }
+  
+  .portfolio-section {
+    padding: 1rem;
+  }
+  
+  .portfolio-section h2 {
+    font-size: 1.6rem;
+  }
+  
+  .static-qr-code {
+    height: 130px;
+  }
+  
+  .qr-container figcaption {
+    font-size: 0.9rem;
+  }
 }
 
-.info-container { 
-  margin-top: 20px; 
-}
-
-.info-container p {
-  margin: 5px 0; 
+/* Add some spacing between elements */
+* + * {
+  margin-top: 0;
 }

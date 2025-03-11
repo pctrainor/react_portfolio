@@ -1,0 +1,129 @@
+.skills-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background-color: #263747; /* Updated to match new color scheme */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #e8e8e8;
+  }
+  
+  .skills-section h2 {
+    font-size: 2.2rem;
+    color: #4CAF50; /* Updated accent color */
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .skills-section h2:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 3px;
+    background-color: #4CAF50; /* Updated accent color */
+    transform: scaleX(0.7);
+    transition: transform 0.3s ease;
+  }
+  
+  .skills-section:hover h2:after {
+    transform: scaleX(1);
+  }
+  
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .skill-category {
+    padding: 1.25rem;
+    background-color: #1e2a3a; /* Darker than section background */
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #263747;
+  }
+  
+  .skill-category h3 {
+    font-size: 1.3rem;
+    color: #4CAF50; /* Updated accent color */
+    margin-bottom: 0.8rem;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.4rem;
+  }
+  
+  .skill-category ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    text-align: left;
+  }
+  
+  .skill-category li {
+    margin: 0.6rem 0;
+    padding-left: 1rem;
+    position: relative;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.3;
+  }
+  
+  .skill-category li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    color: #4CAF50; /* Updated accent color */
+    font-size: 1.1rem;
+    margin-right: 0.3rem;
+    line-height: 1;
+  }
+  
+  @media (max-width: 992px) {
+    .skills-container {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .skills-section {
+      padding: 1.25rem;
+    }
+    
+    .skills-section h2 {
+      font-size: 1.8rem;
+    }
+    
+    .skills-container {
+      grid-template-columns: 1fr;
+      grid-gap: 1.25rem;
+    }
+    
+    .skill-category {
+      padding: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skills-section {
+      padding: 1rem;
+    }
+    
+    .skill-category h3 {
+      font-size: 1.2rem;
+    }
+    
+    .skill-category li {
+      font-size: 0.9rem;
+    }
+  }
