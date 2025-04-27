@@ -21,8 +21,7 @@ function Resume() {
         <div className="highlight-item">
           <h3>Education</h3>
           <p>
-            Master of Information Systems - University of Arkansas (Expected
-            2025)
+            Master of Information Systems - University of Arkansas (2025)
           </p>
           <p>
             Bachelor of Science, Information Technology - United States Naval
